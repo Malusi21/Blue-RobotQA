@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.2 (Python 3.8.8 on win32)" generated="20210809 13:59:02.123" rpa="false" schemaversion="2">
+<suite id="s1" name="BlueRobot AutomationTests" source="C:\Users\mamsomi\Documents\GitHub\Blue-RobotQA\Tests\BlueRobot_AutomationTests.robot">
+<test id="s1-t1" name="Get User Address">
+<kw name="Create List" library="BuiltIn">
+<var>${auth}</var>
+<arg>${Blue-robot_username}</arg>
+<arg>${Blue-robot_password}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20210809 13:59:02.655" level="INFO">${auth} = ['test1', 'test1']</msg>
+<status status="PASS" starttime="20210809 13:59:02.655" endtime="20210809 13:59:02.655"/>
+</kw>
+<kw name="Create Directory" library="OperatingSystem">
+<var>${Headers}</var>
+<arg>Content-Type=application/json Accept=application/json</arg>
+<doc>Creates the specified directory.</doc>
+<msg timestamp="20210809 13:59:02.655" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\mamsomi\Documents\GitHub\Blue-RobotQA\Content-Type=application\json Accept=application\json"&gt;C:\Users\mamsomi\Documents\GitHub\Blue-RobotQA\Content-Type=application\json Accept=application\json&lt;/a&gt;' already exists.</msg>
+<msg timestamp="20210809 13:59:02.655" level="INFO">${Headers} = None</msg>
+<status status="PASS" starttime="20210809 13:59:02.655" endtime="20210809 13:59:02.655"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<var>${Session}</var>
+<arg>${Blue-robot}</arg>
+<arg>${Blue-robot_url}</arg>
+<arg>auth=${auth}</arg>
+<arg>disable_warnings=1</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20210809 13:59:02.655" level="INFO">Creating Session using : alias=bluerobot, url=https://blue-robot.mocklab.io, headers={},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x00000235155B81C0&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg timestamp="20210809 13:59:02.655" level="INFO">${Session} = &lt;requests.sessions.Session object at 0x00000235155B84C0&gt;</msg>
+<status status="PASS" starttime="20210809 13:59:02.655" endtime="20210809 13:59:02.655"/>
+</kw>
+<kw name="Get On Session" library="RequestsLibrary">
+<var>${Get_Response}</var>
+<arg>${Blue-robot}</arg>
+<arg>/address</arg>
+<arg>headers=${Headers}</arg>
+<arg>expected_status=Anything</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20210809 13:59:06.892" level="INFO">GET Request : url=https://blue-robot.mocklab.io/address 
+ path_url=/address 
+ headers={'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Basic dGVzdDE6dGVzdDE='} 
+ body=None 
+ </msg>
+<msg timestamp="20210809 13:59:06.892" level="INFO">GET Response : url=https://blue-robot.mocklab.io/address 
+ status=200, reason=OK 
+ headers={'Content-Type': 'application/json; charset=UTF-8', 'Matched-Stub-Id': 'a1a1929a-bf82-4eb6-aa91-b3d9dd4f9bc8', 'Matched-Stub-Name': 'GET an address', 'Vary': 'Accept-Encoding, User-Agent', 'Content-Encoding': 'gzip', 'Content-Length': '91'} 
+ body={
+  "id": 1,
+  "address": "123 test street, Zonnebloem, Cape town, 8001."
+} 
+ </msg>
+<msg timestamp="20210809 13:59:06.892" level="INFO">${Get_Response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210809 13:59:02.655" endtime="20210809 13:59:06.892"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>200</arg>
+<arg>${Get_Response.status_code}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<msg timestamp="20210809 13:59:06.892" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;class 'int'&gt;</msg>
+<status status="PASS" starttime="20210809 13:59:06.892" endtime="20210809 13:59:06.892"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Get_Response.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210809 13:59:06.892" level="INFO">{'id': 1, 'address': '123 test street, Zonnebloem, Cape town, 8001.'}</msg>
+<status status="PASS" starttime="20210809 13:59:06.892" endtime="20210809 13:59:06.892"/>
+</kw>
+<tag>api</tag>
+<status status="PASS" starttime="20210809 13:59:02.655" endtime="20210809 13:59:06.892"/>
+</test>
+<status status="PASS" starttime="20210809 13:59:02.126" endtime="20210809 13:59:06.892"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">api</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="BlueRobot AutomationTests">BlueRobot AutomationTests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
