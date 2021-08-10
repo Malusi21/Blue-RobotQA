@@ -1,10 +1,10 @@
 *** Settings ***
 Library     Selenium2Library
-Library     Collections
+Library     Screenshot
 Library     RequestsLibrary
 Library     OperatingSystem
 Library     JSONLibrary
 Library     String
-
-Resource            ../Resources/CommonResources.robot
+Library    ../Resources/helperlibs.py
+Resource    ../Resources/CommonResources.robot
 

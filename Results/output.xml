@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0.2 (Python 3.8.8 on win32)" generated="20210809 13:59:02.123" rpa="false" schemaversion="2">
+<robot generator="Robot 4.0.2 (Python 3.8.8 on win32)" generated="20210810 10:54:52.649" rpa="false" schemaversion="2">
 <suite id="s1" name="BlueRobot AutomationTests" source="C:\Users\mamsomi\Documents\GitHub\Blue-RobotQA\Tests\BlueRobot_AutomationTests.robot">
 <test id="s1-t1" name="Get User Address">
 <kw name="Create List" library="BuiltIn">
@@ -7,16 +7,16 @@
 <arg>${Blue-robot_username}</arg>
 <arg>${Blue-robot_password}</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20210809 13:59:02.655" level="INFO">${auth} = ['test1', 'test1']</msg>
-<status status="PASS" starttime="20210809 13:59:02.655" endtime="20210809 13:59:02.655"/>
+<msg timestamp="20210810 10:54:53.308" level="INFO">${auth} = ['test1', 'test1']</msg>
+<status status="PASS" starttime="20210810 10:54:53.308" endtime="20210810 10:54:53.308"/>
 </kw>
 <kw name="Create Directory" library="OperatingSystem">
 <var>${Headers}</var>
 <arg>Content-Type=application/json Accept=application/json</arg>
 <doc>Creates the specified directory.</doc>
-<msg timestamp="20210809 13:59:02.655" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\mamsomi\Documents\GitHub\Blue-RobotQA\Content-Type=application\json Accept=application\json"&gt;C:\Users\mamsomi\Documents\GitHub\Blue-RobotQA\Content-Type=application\json Accept=application\json&lt;/a&gt;' already exists.</msg>
-<msg timestamp="20210809 13:59:02.655" level="INFO">${Headers} = None</msg>
-<status status="PASS" starttime="20210809 13:59:02.655" endtime="20210809 13:59:02.655"/>
+<msg timestamp="20210810 10:54:53.308" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\mamsomi\Documents\GitHub\Blue-RobotQA\Content-Type=application\json Accept=application\json"&gt;C:\Users\mamsomi\Documents\GitHub\Blue-RobotQA\Content-Type=application\json Accept=application\json&lt;/a&gt;' already exists.</msg>
+<msg timestamp="20210810 10:54:53.308" level="INFO">${Headers} = None</msg>
+<status status="PASS" starttime="20210810 10:54:53.308" endtime="20210810 10:54:53.308"/>
 </kw>
 <kw name="Create Session" library="RequestsLibrary">
 <var>${Session}</var>
@@ -25,9 +25,9 @@
 <arg>auth=${auth}</arg>
 <arg>disable_warnings=1</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20210809 13:59:02.655" level="INFO">Creating Session using : alias=bluerobot, url=https://blue-robot.mocklab.io, headers={},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x00000235155B81C0&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<msg timestamp="20210809 13:59:02.655" level="INFO">${Session} = &lt;requests.sessions.Session object at 0x00000235155B84C0&gt;</msg>
-<status status="PASS" starttime="20210809 13:59:02.655" endtime="20210809 13:59:02.655"/>
+<msg timestamp="20210810 10:54:53.309" level="INFO">Creating Session using : alias=bluerobot, url=https://blue-robot.mocklab.io, headers={},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000001EA1D7EEEB0&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg timestamp="20210810 10:54:53.309" level="INFO">${Session} = &lt;requests.sessions.Session object at 0x000001EA1D7EE910&gt;</msg>
+<status status="PASS" starttime="20210810 10:54:53.309" endtime="20210810 10:54:53.309"/>
 </kw>
 <kw name="Get On Session" library="RequestsLibrary">
 <var>${Get_Response}</var>
@@ -36,12 +36,12 @@
 <arg>headers=${Headers}</arg>
 <arg>expected_status=Anything</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20210809 13:59:06.892" level="INFO">GET Request : url=https://blue-robot.mocklab.io/address 
+<msg timestamp="20210810 10:54:57.549" level="INFO">GET Request : url=https://blue-robot.mocklab.io/address 
  path_url=/address 
  headers={'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Basic dGVzdDE6dGVzdDE='} 
  body=None 
  </msg>
-<msg timestamp="20210809 13:59:06.892" level="INFO">GET Response : url=https://blue-robot.mocklab.io/address 
+<msg timestamp="20210810 10:54:57.549" level="INFO">GET Response : url=https://blue-robot.mocklab.io/address 
  status=200, reason=OK 
  headers={'Content-Type': 'application/json; charset=UTF-8', 'Matched-Stub-Id': 'a1a1929a-bf82-4eb6-aa91-b3d9dd4f9bc8', 'Matched-Stub-Name': 'GET an address', 'Vary': 'Accept-Encoding, User-Agent', 'Content-Encoding': 'gzip', 'Content-Length': '91'} 
  body={
@@ -49,38 +49,876 @@
   "address": "123 test street, Zonnebloem, Cape town, 8001."
 } 
  </msg>
-<msg timestamp="20210809 13:59:06.892" level="INFO">${Get_Response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20210809 13:59:02.655" endtime="20210809 13:59:06.892"/>
+<msg timestamp="20210810 10:54:57.550" level="INFO">${Get_Response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210810 10:54:53.309" endtime="20210810 10:54:57.550"/>
 </kw>
 <kw name="Should Be Equal As Integers" library="BuiltIn">
 <arg>200</arg>
 <arg>${Get_Response.status_code}</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<msg timestamp="20210809 13:59:06.892" level="INFO">Argument types are:
+<msg timestamp="20210810 10:54:57.551" level="INFO">Argument types are:
 &lt;type 'unicode'&gt;
 &lt;class 'int'&gt;</msg>
-<status status="PASS" starttime="20210809 13:59:06.892" endtime="20210809 13:59:06.892"/>
+<status status="PASS" starttime="20210810 10:54:57.550" endtime="20210810 10:54:57.551"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${Get_Response.json()}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210809 13:59:06.892" level="INFO">{'id': 1, 'address': '123 test street, Zonnebloem, Cape town, 8001.'}</msg>
-<status status="PASS" starttime="20210809 13:59:06.892" endtime="20210809 13:59:06.892"/>
+<msg timestamp="20210810 10:54:57.552" level="INFO">{'id': 1, 'address': '123 test street, Zonnebloem, Cape town, 8001.'}</msg>
+<status status="PASS" starttime="20210810 10:54:57.551" endtime="20210810 10:54:57.552"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${ResponseJson}</arg>
+<arg>${Get_Response.json()}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20210810 10:54:57.555" level="INFO">${ResponseJson} = {'id': 1, 'address': '123 test street, Zonnebloem, Cape town, 8001.'}</msg>
+<status status="PASS" starttime="20210810 10:54:57.553" endtime="20210810 10:54:57.555"/>
+</kw>
+<kw name="Get User Address from Json" library="CommonResources">
+<arg>${ResponseJson}</arg>
+<doc>Helper keyword thatthat helps get and set the user address returned</doc>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${ID_value}</var>
+<arg>${RecievedJson}</arg>
+<arg>$..id</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20210810 10:54:57.580" level="INFO">${ID_value} = [1]</msg>
+<status status="PASS" starttime="20210810 10:54:57.556" endtime="20210810 10:54:57.580"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${Address_value}</var>
+<arg>${RecievedJson}</arg>
+<arg>$..address</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20210810 10:54:57.596" level="INFO">${Address_value} = ['123 test street, Zonnebloem, Cape town, 8001.']</msg>
+<status status="PASS" starttime="20210810 10:54:57.580" endtime="20210810 10:54:57.596"/>
+</kw>
+<kw name="Convert JSON To String" library="JSONLibrary">
+<var>${ID_value}</var>
+<arg>${ID_value[0]}</arg>
+<doc>Convert JSON object to string</doc>
+<msg timestamp="20210810 10:54:57.597" level="INFO">${ID_value} = 1</msg>
+<status status="PASS" starttime="20210810 10:54:57.596" endtime="20210810 10:54:57.597"/>
+</kw>
+<kw name="Convert JSON To String" library="JSONLibrary">
+<var>${Address_value}</var>
+<arg>${Address_value[0]}</arg>
+<doc>Convert JSON object to string</doc>
+<msg timestamp="20210810 10:54:57.598" level="INFO">${Address_value} = "123 test street, Zonnebloem, Cape town, 8001."</msg>
+<status status="PASS" starttime="20210810 10:54:57.597" endtime="20210810 10:54:57.598"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ID_value}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210810 10:54:57.598" level="INFO">1</msg>
+<status status="PASS" starttime="20210810 10:54:57.598" endtime="20210810 10:54:57.598"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Address_value}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210810 10:54:57.598" level="INFO">"123 test street, Zonnebloem, Cape town, 8001."</msg>
+<status status="PASS" starttime="20210810 10:54:57.598" endtime="20210810 10:54:57.598"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${id}</arg>
+<arg>${ID_value}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20210810 10:54:57.599" level="INFO">${id} = 1</msg>
+<status status="PASS" starttime="20210810 10:54:57.598" endtime="20210810 10:54:57.599"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${address}</arg>
+<arg>${Address_value}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20210810 10:54:57.601" level="INFO">${address} = "123 test street, Zonnebloem, Cape town, 8001."</msg>
+<status status="PASS" starttime="20210810 10:54:57.599" endtime="20210810 10:54:57.601"/>
+</kw>
+<status status="PASS" starttime="20210810 10:54:57.556" endtime="20210810 10:54:57.601"/>
 </kw>
 <tag>api</tag>
-<status status="PASS" starttime="20210809 13:59:02.655" endtime="20210809 13:59:06.892"/>
+<tag>bluerobot</tag>
+<status status="PASS" starttime="20210810 10:54:53.307" endtime="20210810 10:54:57.601"/>
 </test>
-<status status="PASS" starttime="20210809 13:59:02.126" endtime="20210809 13:59:06.892"/>
+<test id="s1-t2" name="Browser Student Registration">
+<kw name="Open Browser and Validate Landing page" library="CommonResources">
+<arg>${Auto-Practice_url}</arg>
+<doc>Helper keyword to open the browser and Validate the landing page that the user is redirected to by taking in the url and capturing a screenshot</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210810 10:54:57.603" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
+<status status="PASS" starttime="20210810 10:54:57.603" endtime="20210810 10:55:09.087"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Location Should Be</arg>
+<arg>${url}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Location Should Be" library="Selenium2Library">
+<arg>${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210810 10:55:09.092" level="INFO">Current location is 'https://demoqa.com/automation-practice-form'.</msg>
+<status status="PASS" starttime="20210810 10:55:09.088" endtime="20210810 10:55:09.092"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:09.088" endtime="20210810 10:55:09.092"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Maximize Browser Window</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210810 10:55:09.092" endtime="20210810 10:55:09.220"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:09.092" endtime="20210810 10:55:09.220"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210810 10:55:09.456" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-205.png"&gt;&lt;img src="selenium-screenshot-205.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210810 10:55:09.220" endtime="20210810 10:55:09.456"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:09.220" endtime="20210810 10:55:09.456"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${Form_header}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${Form_header}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210810 10:55:09.464" level="INFO">Current page contains element '//*[@id="app"]/div/div/div[1]/div[contains(.,"Practice Form")]'.</msg>
+<status status="PASS" starttime="20210810 10:55:09.456" endtime="20210810 10:55:09.464"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:09.456" endtime="20210810 10:55:09.464"/>
+</kw>
+<status status="PASS" starttime="20210810 10:54:57.603" endtime="20210810 10:55:09.464"/>
+</kw>
+<kw name="Enter Student Registration details" library="CommonResources">
+<doc>Keyword that populates the Practice form with the Student details</doc>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Input Text</arg>
+<arg>${FirstName_field}</arg>
+<arg>${Firstname}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${FirstName_field}</arg>
+<arg>${Firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210810 10:55:09.466" level="INFO">Typing text 'Blue-Auto' into text field '//*[@id="firstName"]'.</msg>
+<status status="PASS" starttime="20210810 10:55:09.465" endtime="20210810 10:55:09.530"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:09.465" endtime="20210810 10:55:09.530"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Input Text</arg>
+<arg>${LastName_field}</arg>
+<arg>${Lastname}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${LastName_field}</arg>
+<arg>${Lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210810 10:55:09.530" level="INFO">Typing text 'Robot-Mation' into text field '//*[@id="lastName"]'.</msg>
+<status status="PASS" starttime="20210810 10:55:09.530" endtime="20210810 10:55:09.593"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:09.530" endtime="20210810 10:55:09.593"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Input Text</arg>
+<arg>${Email_field}</arg>
+<arg>${Email}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${Email_field}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210810 10:55:09.594" level="INFO">Typing text 'malusi@gmail.com' into text field '//*[@id="userEmail"]'.</msg>
+<status status="PASS" starttime="20210810 10:55:09.594" endtime="20210810 10:55:09.647"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:09.593" endtime="20210810 10:55:09.647"/>
+</kw>
+<kw name="Select Gender Option" library="CommonResources">
+<doc>Helper keyword to select an option from the available Genders on the form, using the gender passed in the test</doc>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Click Element</arg>
+<arg>${GenderTitle}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${GenderTitle}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210810 10:55:09.648" level="INFO">Clicking element '//*[@id="genterWrapper"]/div[contains(.,"Gender")]'.</msg>
+<status status="PASS" starttime="20210810 10:55:09.647" endtime="20210810 10:55:09.674"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:09.647" endtime="20210810 10:55:09.674"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${GENDER}' == 'Male'</arg>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Click Element</arg>
+<arg>${Male-RadioButton}</arg>
+<arg>ELSE IF</arg>
+<arg>'${GENDER}' == 'Female'</arg>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Click Element</arg>
+<arg>${Female-RadioButton}</arg>
+<arg>ELSE IF</arg>
+<arg>'${GENDER}' == 'Other'</arg>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Click Element</arg>
+<arg>${Other-RadioButton}</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>${GenderNotFound_message}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Click Element</arg>
+<arg>${Male-RadioButton}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${Male-RadioButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210810 10:55:09.675" level="INFO">Clicking element '//*[@id="genterWrapper"]//label[contains(.,"Male")]'.</msg>
+<status status="PASS" starttime="20210810 10:55:09.675" endtime="20210810 10:55:09.712"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:09.675" endtime="20210810 10:55:09.712"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:09.675" endtime="20210810 10:55:09.712"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:09.647" endtime="20210810 10:55:09.712"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Input Text</arg>
+<arg>${MobileNumber_field}</arg>
+<arg>${Mobile}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${MobileNumber_field}</arg>
+<arg>${Mobile}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210810 10:55:09.713" level="INFO">Typing text '0254658745' into text field '//*[@id="userNumber"]'.</msg>
+<status status="PASS" starttime="20210810 10:55:09.712" endtime="20210810 10:55:09.770"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:09.712" endtime="20210810 10:55:09.770"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Click Element</arg>
+<arg>${DateOfBirth_field}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${DateOfBirth_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210810 10:55:09.771" level="INFO">Clicking element '//*[@id="dateOfBirthInput"]'.</msg>
+<status status="PASS" starttime="20210810 10:55:09.771" endtime="20210810 10:55:09.852"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:09.771" endtime="20210810 10:55:09.852"/>
+</kw>
+<kw name="Clear Date Field" library="CommonResources">
+<doc>Helper keyword to update the year value on the Date field</doc>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>press keys</arg>
+<arg>${DateOfBirth_field}</arg>
+<arg>BACKSPACE</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>${DateOfBirth_field}</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210810 10:55:09.853" level="INFO">Sending key(s) ('BACKSPACE',) to //*[@id="dateOfBirthInput"] element.</msg>
+<msg timestamp="20210810 10:55:10.167" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20210810 10:55:10.168" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20210810 10:55:09.853" endtime="20210810 10:55:10.191"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:09.852" endtime="20210810 10:55:10.191"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>press keys</arg>
+<arg>${DateOfBirth_field}</arg>
+<arg>BACKSPACE</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>${DateOfBirth_field}</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210810 10:55:10.193" level="INFO">Sending key(s) ('BACKSPACE',) to //*[@id="dateOfBirthInput"] element.</msg>
+<msg timestamp="20210810 10:55:10.490" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20210810 10:55:10.490" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20210810 10:55:10.192" endtime="20210810 10:55:10.540"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:10.192" endtime="20210810 10:55:10.540"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:09.852" endtime="20210810 10:55:10.540"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Input Text</arg>
+<arg>${DateOfBirth_field}</arg>
+<arg>${DOB}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${DateOfBirth_field}</arg>
+<arg>${DOB}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210810 10:55:10.541" level="INFO">Typing text '03' into text field '//*[@id="dateOfBirthInput"]'.</msg>
+<status status="PASS" starttime="20210810 10:55:10.541" endtime="20210810 10:55:10.691"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:10.540" endtime="20210810 10:55:10.691"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210810 10:55:10.936" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-206.png"&gt;&lt;img src="selenium-screenshot-206.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210810 10:55:10.692" endtime="20210810 10:55:10.937"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:10.692" endtime="20210810 10:55:10.937"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollTo(0, 200)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20210810 10:55:10.938" level="INFO">Executing JavaScript:
+window.scrollTo(0, 200)
+Without any arguments.</msg>
+<status status="PASS" starttime="20210810 10:55:10.937" endtime="20210810 10:55:10.951"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Set Focus To Element</arg>
+<arg>${Subjects_field}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Set Focus To Element" library="Selenium2Library">
+<arg>${Subjects_field}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20210810 10:55:10.952" endtime="20210810 10:55:10.996"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:10.952" endtime="20210810 10:55:10.996"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Input Text</arg>
+<arg>${Subjects_field}</arg>
+<arg>${SUBJECTS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${Subjects_field}</arg>
+<arg>${SUBJECTS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210810 10:55:10.997" level="INFO">Typing text '' into text field '//*[@id="subjectsInput"]'.</msg>
+<status status="PASS" starttime="20210810 10:55:10.997" endtime="20210810 10:55:11.039"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:10.996" endtime="20210810 10:55:11.039"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Press Keys</arg>
+<arg>${Subjects_field}</arg>
+<arg>ENTER</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>${Subjects_field}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210810 10:55:11.041" level="INFO">Sending key(s) ('ENTER',) to //*[@id="subjectsInput"] element.</msg>
+<msg timestamp="20210810 10:55:11.327" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20210810 10:55:11.327" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20210810 10:55:11.040" endtime="20210810 10:55:11.339"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:11.040" endtime="20210810 10:55:11.339"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollTo(0, 600)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20210810 10:55:11.339" level="INFO">Executing JavaScript:
+window.scrollTo(0, 600)
+Without any arguments.</msg>
+<status status="PASS" starttime="20210810 10:55:11.339" endtime="20210810 10:55:11.343"/>
+</kw>
+<kw name="Select Hobby Option" library="CommonResources">
+<doc>Helper keyword to select an option from the available Hobbies on the form, using the Hobby passed in the test</doc>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Click Element</arg>
+<arg>${HobbyTitle}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${HobbyTitle}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210810 10:55:11.344" level="INFO">Clicking element '//*[@id="subjects-label"][contains(.,"Hobbies")]'.</msg>
+<status status="PASS" starttime="20210810 10:55:11.343" endtime="20210810 10:55:11.385"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:11.343" endtime="20210810 10:55:11.385"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${HOBBY}' == 'Sports'</arg>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Click Element</arg>
+<arg>${Hobby-Sport}</arg>
+<arg>ELSE IF</arg>
+<arg>'${HOBBY}' == 'Reading'</arg>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Click Element</arg>
+<arg>${Hobby-Reading}</arg>
+<arg>ELSE IF</arg>
+<arg>'${HOBBY}' == 'Music'</arg>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Click Element</arg>
+<arg>${Hobby-Music}</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>${HobbiesNotFound_message}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Click Element</arg>
+<arg>${Hobby-Sport}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${Hobby-Sport}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210810 10:55:11.386" level="INFO">Clicking element '//*[@id="hobbiesWrapper"]/div[2]/div[1]/label[contains(.,"Sports")]'.</msg>
+<status status="PASS" starttime="20210810 10:55:11.386" endtime="20210810 10:55:11.423"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:11.386" endtime="20210810 10:55:11.423"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:11.385" endtime="20210810 10:55:11.423"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:11.343" endtime="20210810 10:55:11.423"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Choose File</arg>
+<arg>${UploadField}</arg>
+<arg>${EXECDIR}${/}Resources/${File_Name}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Choose File" library="Selenium2Library">
+<arg>${UploadField}</arg>
+<arg>${EXECDIR}${/}Resources/${File_Name}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20210810 10:55:11.424" level="INFO">Sending C:\Users\mamsomi\Documents\GitHub\Blue-RobotQA\Resources\Profile.jpg to browser.</msg>
+<status status="PASS" starttime="20210810 10:55:11.424" endtime="20210810 10:55:11.451"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:11.424" endtime="20210810 10:55:11.451"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Input Text</arg>
+<arg>${CurrentAddress_field}</arg>
+<arg>${address}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${CurrentAddress_field}</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210810 10:55:11.452" level="INFO">Typing text '"123 test street, Zonnebloem, Cape town, 8001."' into text field '//*[@id="currentAddress"]'.</msg>
+<status status="PASS" starttime="20210810 10:55:11.452" endtime="20210810 10:55:11.525"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:11.451" endtime="20210810 10:55:11.525"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollTo(0, 400)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20210810 10:55:11.526" level="INFO">Executing JavaScript:
+window.scrollTo(0, 400)
+Without any arguments.</msg>
+<status status="PASS" starttime="20210810 10:55:11.525" endtime="20210810 10:55:11.528"/>
+</kw>
+<kw name="Select City and State Option" library="CommonResources">
+<doc>Helper keyword to select the city and state values</doc>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Click Element</arg>
+<arg>${StateDropdown}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${StateDropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210810 10:55:11.529" level="INFO">Clicking element '//*[@id="stateCity-wrapper"]/div[2]'.</msg>
+<status status="PASS" starttime="20210810 10:55:11.529" endtime="20210810 10:55:11.572"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:11.529" endtime="20210810 10:55:11.572"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Click Element</arg>
+<arg>${State_Haryana_dropdownItem}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${State_Haryana_dropdownItem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210810 10:55:11.573" level="INFO">Clicking element '//*[@id="react-select-3-option-2"][contains(.,"Haryana")]'.</msg>
+<status status="PASS" starttime="20210810 10:55:11.573" endtime="20210810 10:55:11.615"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:11.572" endtime="20210810 10:55:11.615"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Click Element</arg>
+<arg>${CityDropdown}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${CityDropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210810 10:55:11.616" level="INFO">Clicking element '//*[@id="stateCity-wrapper"]/div[3]'.</msg>
+<status status="PASS" starttime="20210810 10:55:11.616" endtime="20210810 10:55:11.645"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:11.615" endtime="20210810 10:55:11.645"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Click Element</arg>
+<arg>${City_Haryana_Karnal_dropdownItem}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${City_Haryana_Karnal_dropdownItem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210810 10:55:11.646" level="INFO">Clicking element '//*[@id="react-select-4-option-0"][contains(.,"Karnal")]'.</msg>
+<status status="PASS" starttime="20210810 10:55:11.646" endtime="20210810 10:55:11.675"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:11.645" endtime="20210810 10:55:11.675"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:11.529" endtime="20210810 10:55:11.676"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:09.465" endtime="20210810 10:55:11.676"/>
+</kw>
+<kw name="Confirm and Submit Form" library="CommonResources">
+<doc>Helper keyword to Confirm and Submit form</doc>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210810 10:55:11.935" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-207.png"&gt;&lt;img src="selenium-screenshot-207.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210810 10:55:11.677" endtime="20210810 10:55:11.935"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:11.677" endtime="20210810 10:55:11.935"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Click Element</arg>
+<arg>${SubmitButton}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${SubmitButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210810 10:55:11.935" level="INFO">Clicking element '//*[@id="submit"]'.</msg>
+<status status="PASS" starttime="20210810 10:55:11.935" endtime="20210810 10:55:11.982"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:11.935" endtime="20210810 10:55:11.982"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:11.676" endtime="20210810 10:55:11.982"/>
+</kw>
+<kw name="Validate Student Details Entered In Practice Form" library="CommonResources">
+<doc>Keyword validates the detals entered by the student</doc>
+<kw name="Log" library="BuiltIn">
+<arg>Finish</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210810 10:55:11.983" level="INFO">Finish</msg>
+<status status="PASS" starttime="20210810 10:55:11.983" endtime="20210810 10:55:11.983"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollTo(0, 900)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20210810 10:55:11.984" level="INFO">Executing JavaScript:
+window.scrollTo(0, 900)
+Without any arguments.</msg>
+<status status="PASS" starttime="20210810 10:55:11.983" endtime="20210810 10:55:11.987"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Page Should Contain</arg>
+<arg>${Firstname}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>${Firstname}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210810 10:55:11.998" level="INFO">Current page contains text 'Blue-Auto'.</msg>
+<status status="PASS" starttime="20210810 10:55:11.988" endtime="20210810 10:55:11.998"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:11.988" endtime="20210810 10:55:11.998"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Page Should Contain</arg>
+<arg>${Lastname}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>${Lastname}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210810 10:55:12.008" level="INFO">Current page contains text 'Robot-Mation'.</msg>
+<status status="PASS" starttime="20210810 10:55:11.999" endtime="20210810 10:55:12.008"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:11.999" endtime="20210810 10:55:12.008"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Page Should Contain</arg>
+<arg>${Email}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>${Email}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210810 10:55:12.018" level="INFO">Current page contains text 'malusi@gmail.com'.</msg>
+<status status="PASS" starttime="20210810 10:55:12.009" endtime="20210810 10:55:12.019"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:12.008" endtime="20210810 10:55:12.019"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Page Should Contain</arg>
+<arg>${GENDER}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>${GENDER}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210810 10:55:12.029" level="INFO">Current page contains text 'Male'.</msg>
+<status status="PASS" starttime="20210810 10:55:12.019" endtime="20210810 10:55:12.029"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:12.019" endtime="20210810 10:55:12.029"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Page Should Contain</arg>
+<arg>${Mobile}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>${Mobile}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210810 10:55:12.040" level="INFO">Current page contains text '0254658745'.</msg>
+<status status="PASS" starttime="20210810 10:55:12.030" endtime="20210810 10:55:12.040"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:12.029" endtime="20210810 10:55:12.040"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Page Should Contain</arg>
+<arg>${HOBBY}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>${HOBBY}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210810 10:55:12.050" level="INFO">Current page contains text 'Sports'.</msg>
+<status status="PASS" starttime="20210810 10:55:12.041" endtime="20210810 10:55:12.050"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:12.040" endtime="20210810 10:55:12.050"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollTo(0, 900)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20210810 10:55:12.050" level="INFO">Executing JavaScript:
+window.scrollTo(0, 900)
+Without any arguments.</msg>
+<status status="PASS" starttime="20210810 10:55:12.050" endtime="20210810 10:55:12.052"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Page Should Contain</arg>
+<arg>${New_DOB}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>${New_DOB}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210810 10:55:12.063" level="INFO">Current page contains text '10 August,2003'.</msg>
+<status status="PASS" starttime="20210810 10:55:12.052" endtime="20210810 10:55:12.063"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:12.052" endtime="20210810 10:55:12.063"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Page Should Contain</arg>
+<arg>${SUBJECTS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>${SUBJECTS}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210810 10:55:12.089" level="INFO">Current page contains text ''.</msg>
+<status status="PASS" starttime="20210810 10:55:12.064" endtime="20210810 10:55:12.089"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:12.063" endtime="20210810 10:55:12.089"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Page Should Contain</arg>
+<arg>${File_Name}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>${File_Name}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210810 10:55:12.099" level="INFO">Current page contains text 'Profile.jpg'.</msg>
+<status status="PASS" starttime="20210810 10:55:12.090" endtime="20210810 10:55:12.100"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:12.089" endtime="20210810 10:55:12.100"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Page Should Contain</arg>
+<arg>${address}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>${address}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210810 10:55:12.111" level="INFO">Current page contains text '"123 test street, Zonnebloem, Cape town, 8001."'.</msg>
+<status status="PASS" starttime="20210810 10:55:12.100" endtime="20210810 10:55:12.111"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:12.100" endtime="20210810 10:55:12.111"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Page Should Contain</arg>
+<arg>${STATE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>${STATE}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210810 10:55:12.121" level="INFO">Current page contains text 'Haryana'.</msg>
+<status status="PASS" starttime="20210810 10:55:12.111" endtime="20210810 10:55:12.121"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:12.111" endtime="20210810 10:55:12.121"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Page Should Contain</arg>
+<arg>${CITY}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>${CITY}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210810 10:55:12.133" level="INFO">Current page contains text 'Karnal'.</msg>
+<status status="PASS" starttime="20210810 10:55:12.123" endtime="20210810 10:55:12.133"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:12.122" endtime="20210810 10:55:12.133"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Click Element</arg>
+<arg>${google_advert}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${google_advert}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210810 10:55:12.134" level="INFO">Clicking element '//*[@id="close-fixedban"]/img'.</msg>
+<status status="PASS" starttime="20210810 10:55:12.133" endtime="20210810 10:55:12.164"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:12.133" endtime="20210810 10:55:12.164"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Click Element</arg>
+<arg>${Close_preview_button}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${Close_preview_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210810 10:55:12.164" level="INFO">Clicking element '//*[@id="closeLargeModal"]'.</msg>
+<status status="PASS" starttime="20210810 10:55:12.164" endtime="20210810 10:55:12.204"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:12.164" endtime="20210810 10:55:12.204"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${BrowserWait}</arg>
+<arg>${BrowserWait_retry}</arg>
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210810 10:55:12.413" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-208.png"&gt;&lt;img src="selenium-screenshot-208.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210810 10:55:12.205" endtime="20210810 10:55:12.413"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:12.204" endtime="20210810 10:55:12.413"/>
+</kw>
+<status status="PASS" starttime="20210810 10:55:11.983" endtime="20210810 10:55:12.413"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210810 10:55:12.413" endtime="20210810 10:55:16.132"/>
+</kw>
+<tag>bluerobot</tag>
+<tag>ui</tag>
+<status status="PASS" starttime="20210810 10:54:57.602" endtime="20210810 10:55:16.134"/>
+</test>
+<status status="PASS" starttime="20210810 10:54:52.653" endtime="20210810 10:55:16.135"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 <stat pass="1" fail="0" skip="0">api</stat>
+<stat pass="2" fail="0" skip="0">bluerobot</stat>
+<stat pass="1" fail="0" skip="0">ui</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="BlueRobot AutomationTests">BlueRobot AutomationTests</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="BlueRobot AutomationTests">BlueRobot AutomationTests</stat>
 </suite>
 </statistics>
 <errors>
