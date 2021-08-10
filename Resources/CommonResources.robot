@@ -106,9 +106,9 @@ Validate Student Details Entered In Practice Form
     Wait Until Keyword Succeeds    ${BrowserWait}    ${BrowserWait_retry}    Page Should Contain    ${GENDER}
     Wait Until Keyword Succeeds    ${BrowserWait}    ${BrowserWait_retry}    Page Should Contain    ${Mobile}
     Wait Until Keyword Succeeds    ${BrowserWait}    ${BrowserWait_retry}    Page Should Contain    ${HOBBY}
-    Execute JavaScript    window.scrollTo(0, 900)
     Wait Until Keyword Succeeds    ${BrowserWait}    ${BrowserWait_retry}    Page Should Contain    ${New_DOB}
     Wait Until Keyword Succeeds    ${BrowserWait}    ${BrowserWait_retry}    Page Should Contain    ${SUBJECTS}
+    Execute JavaScript    window.scrollTo(0, 900)
     Wait Until Keyword Succeeds    ${BrowserWait}    ${BrowserWait_retry}    Page Should Contain    ${File_Name}
     Wait Until Keyword Succeeds    ${BrowserWait}    ${BrowserWait_retry}    Page Should Contain    ${address}
     Wait Until Keyword Succeeds    ${BrowserWait}    ${BrowserWait_retry}    Page Should Contain    ${STATE}
